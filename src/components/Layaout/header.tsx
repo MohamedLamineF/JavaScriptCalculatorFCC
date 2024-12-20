@@ -1,5 +1,5 @@
-import { ThemeToggle } from "../UI/ThemeToggle";
-import { HeaderProps } from "../../types";
+import { ThemeToggle } from '../UI/ThemeToggle';
+import { HeaderProps } from '../../types';
 
 export function Header({ isDark, onToggleTheme }: HeaderProps) {
   return (
@@ -13,11 +13,7 @@ export function Header({ isDark, onToggleTheme }: HeaderProps) {
               <h1 className="text-2xl text-center font-bold">Calculator</h1>
             </div>
 
-            <ThemeToggle
-              isDark={isDark}
-              onToggle={onToggleTheme}
-              aria-label="Toggle theme"
-            />
+            <ThemeToggle isDark={isDark} onToggle={onToggleTheme} aria-label="Toggle theme" />
           </div>
         </div>
       </header>

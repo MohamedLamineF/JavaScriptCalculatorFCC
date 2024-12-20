@@ -1,7 +1,7 @@
-import "./App.css";
-import { Footer } from "./components/Layaout/footer";
-import { Header } from "./components/Layaout/header";
-import { useDarkMode } from "./hooks/useDarkMode";
+import './App.css';
+import { Footer } from './components/Layaout/footer';
+import { Header } from './components/Layaout/header';
+import { useDarkMode } from './hooks/useDarkMode';
 
 function App() {
   const { isDark, setIsDark } = useDarkMode();
