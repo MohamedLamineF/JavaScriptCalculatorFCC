@@ -4,6 +4,9 @@ import { Footer } from './components/Layaout/footer';
 import { Header } from './components/Layaout/header';
 import { useDarkMode } from './hooks/useDarkMode';
 import { calculatorReducer, initialiState } from './reducers/calculatorReducer';
+import { Calculator } from './components/Calculator';
+import { Display } from './components/Display';
+import { ButtonGrid } from './components/ButtonGrid';
 
 function App() {
   const { isDark, setIsDark } = useDarkMode();
@@ -26,10 +29,10 @@ function App() {
           ></div>
         </div>
         <main className="container mx-auto px-4 py-8 mb-28">
-          {/* <Calculator>
+          <Calculator>
             <Display value={finalDisplayValue} />
             <ButtonGrid dispatch={dispatch} />
-          </Calculator> */}
+          </Calculator>
         </main>
       </div>
       <Footer />
