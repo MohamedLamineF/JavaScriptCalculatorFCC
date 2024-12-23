@@ -1,10 +1,16 @@
+import { useReducer } from 'react';
 import './App.css';
 import { Footer } from './components/Layaout/footer';
 import { Header } from './components/Layaout/header';
 import { useDarkMode } from './hooks/useDarkMode';
+import { calculatorReducer, initialiState } from './reducers/calculatorReducer';
 
 function App() {
   const { isDark, setIsDark } = useDarkMode();
+  const [state, dispatch] = useReducer(calculatorReducer, initialiState);
+
+  const displayValue = state.currentValue || state.previousValue || '0';
+  const finalDisplayValue = state.isNegative && state.currentValue === '' ? '-' + displayValue : displayValue;
 
   return (
     <>
@@ -19,7 +25,12 @@ function App() {
             }`}
           ></div>
         </div>
-        <main className="container mx-auto px-4 py-8 mb-28"></main>
+        <main className="container mx-auto px-4 py-8 mb-28">
+          {/* <Calculator>
+            <Display value={finalDisplayValue} />
+            <ButtonGrid dispatch={dispatch} />
+          </Calculator> */}
+        </main>
       </div>
       <Footer />
     </>
