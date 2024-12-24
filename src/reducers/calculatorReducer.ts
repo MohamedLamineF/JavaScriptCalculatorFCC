@@ -1,5 +1,5 @@
 import { handleDigit } from '../handlers/digitHandler';
-import { handleEvaluate } from '../handlers/evaluationHandler';
+import { handleEvaluation } from '../handlers/evaluationHandler';
 import { handleOperation } from '../handlers/operationsHandler';
 import { Action, CalculatorState } from '../types';
 
@@ -16,11 +16,11 @@ export function calculatorReducer(state: CalculatorState, action: Action): Calcu
     case 'ADD_DIGIT':
       return handleDigit(state, action.digit);
     case 'CHOOSE_OPERATION':
-      return handleOperation(state, action.operations);
+      return handleOperation(state, action.operation);
     case 'CLEAR':
       return initialiState;
     case 'EVALUATE':
-      return handleEvaluate(state);
+      return handleEvaluation(state);
     default:
       return state;
   }

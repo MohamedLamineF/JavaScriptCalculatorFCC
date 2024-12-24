@@ -5,25 +5,22 @@ export function isOperator(value: string | null): value is Operation {
 }
 
 export function shouldHandleNegative(state: CalculatorState, operation: Operation): boolean {
-  if (state.currentValue === '' && operation === '-') {
+  if (state.currentValue === '' && state.previousValue === '') {
     return operation === '-';
   }
-
-  if (operation === '-' && state.operation && state.currentValue !== '') {
+  if (operation === '-' && state.operation && state.currentValue === '') {
     return !state.isNegative;
   }
   return false;
 }
 
 export function shouldUpdateOperation(state: CalculatorState, operation: Operation): boolean {
-  if (state.isNegative && operation === '-' && state.currentValue === '') {
+  if (state.isNegative && operation !== '-' && state.currentValue === '') {
     return true;
   }
-
   if (shouldHandleNegative(state, operation)) {
     return false;
   }
-
   return state.previousValue !== '';
 }
 

@@ -1,6 +1,7 @@
 import { CalculatorState, Operation } from '../types';
-import { getEffectiveValue, shouldHandleNegative, shouldUpdateOperation } from '../utils/operationUtils';
 import { calculate, formatNumber } from '../utils/calculator';
+import { getEffectiveValue, shouldHandleNegative, shouldUpdateOperation } from '../utils/operationUtils';
+
 export function handleOperation(state: CalculatorState, operation: Operation): CalculatorState {
   if (shouldHandleNegative(state, operation)) {
     return { ...state, isNegative: true };
@@ -35,7 +36,6 @@ export function handleOperation(state: CalculatorState, operation: Operation): C
     operation,
     previousValue: formatNumber(result),
     currentValue: '',
-    overwrite: false,
     isNegative: false,
   };
 }

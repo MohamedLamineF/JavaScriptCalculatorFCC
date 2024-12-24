@@ -16,7 +16,7 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
       </Button>
       <Button
         id="divide"
-        onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operations: '/' })}
+        onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operation: '/' })}
         className="bg-violet-500/80 hover:bg-violet-600/90 text-white backdrop-blur-sm"
       >
         /
@@ -24,7 +24,7 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
 
       <Button
         id="multiply"
-        onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operations: '*' })}
+        onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operation: '*' })}
         className="bg-violet-500/80 hover:bg-violet-600/90 text-white backdrop-blur-sm"
       >
         x
@@ -56,7 +56,7 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
 
       <Button
         id="subtract"
-        onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operations: '-' })}
+        onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operation: '-' })}
         className="bg-violet-500/80 hover:bg-violet-600/90 text-white backdrop-blur-sm"
       >
         -
@@ -88,7 +88,7 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
 
       <Button
         id="add"
-        onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operations: '+' })}
+        onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operation: '+' })}
         className="bg-violet-500/80 hover:bg-violet-600/90 text-white backdrop-blur-sm"
       >
         +

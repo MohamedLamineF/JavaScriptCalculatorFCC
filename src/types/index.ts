@@ -20,6 +20,6 @@ export interface CalculatorState {
 
 export type Action =
   | { type: 'ADD_DIGIT'; digit: string }
-  | { type: 'CHOOSE_OPERATION'; operations: Operation }
+  | { type: 'CHOOSE_OPERATION'; operation: Operation }
   | { type: 'CLEAR' }
   | { type: 'EVALUATE' };
