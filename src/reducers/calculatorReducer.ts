@@ -1,5 +1,5 @@
 import { handleDigit } from '../handlers/digitHandler';
-import { hanfleEveluate } from '../handlers/evaluationHandler';
+import { handleEvaluate } from '../handlers/evaluationHandler';
 import { handleOperation } from '../handlers/operationsHandler';
 import { Action, CalculatorState } from '../types';
 
@@ -20,7 +20,7 @@ export function calculatorReducer(state: CalculatorState, action: Action): Calcu
     case 'CLEAR':
       return initialiState;
     case 'EVALUATE':
-      return hanfleEveluate(state);
+      return handleEvaluate(state);
     default:
       return state;
   }

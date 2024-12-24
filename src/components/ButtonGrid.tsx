@@ -6,7 +6,7 @@ interface ButtonGridProps {
 }
 export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
   return (
-    <div className="grid grid-cols-4 gap-2 mt-4">
+    <div className="grid grid-cols-4 gap-2 mt-4 grid-rows-[repeat(5,4rem)]">
       <Button
         id="clear"
         onClick={() => dispatch({ type: 'CLEAR' })}
@@ -116,15 +116,13 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
       >
         3
       </Button>
-
       <Button
         id="equals"
         onClick={() => dispatch({ type: 'EVALUATE' })}
-        className="row-span-2 bg-blue-500/80 hover:bg-blue-600/90 text-white backdrop-blur-sm"
+        className="row-span-2 min-h-full bg-blue-500/80 hover:bg-blue-600/90 text-white backdrop-blur-sm"
       >
         =
       </Button>
-
       <Button
         id="zero"
         onClick={() => dispatch({ type: 'ADD_DIGIT', digit: '0' })}

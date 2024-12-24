@@ -28,7 +28,7 @@ function App() {
             }`}
           ></div>
         </div>
-        <main className="container mx-auto px-4 py-8 mb-28">
+        <main className="container mx-auto px-4 py-8 flex items-center justify-center">
           <Calculator>
             <Display value={finalDisplayValue} />
             <ButtonGrid dispatch={dispatch} />

@@ -18,6 +18,5 @@ export function handleDigit(state: CalculatorState, digit: string): CalculatorSt
       return { ...state, currentValue: '0.' };
     }
   }
-
   return { ...state, currentValue: `${state.currentValue === '0' ? '' : state.currentValue}${digit}` };
 }

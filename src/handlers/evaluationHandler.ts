@@ -2,7 +2,7 @@ import { CalculatorState } from '../types';
 import { calculate, formatNumber } from '../utils/calculator';
 import { getEffectiveValue } from '../utils/operationUtils';
 
-export function hanfleEveluate(state: CalculatorState): CalculatorState {
+export function handleEvaluate(state: CalculatorState): CalculatorState {
   if (!state.operation) return state;
 
   const prevValue = getEffectiveValue(state.previousValue, false);
