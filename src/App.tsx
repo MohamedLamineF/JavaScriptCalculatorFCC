@@ -8,12 +8,11 @@ import { Calculator } from './components/Calculator';
 import { Display } from './components/Display';
 import { ButtonGrid } from './components/ButtonGrid';
 import { useKeyboardInput } from './hooks/useKeyboardInput';
+// import { useKeyboardInput } from './hooks/useKeyboardInput';
 
 function App() {
   const { isDark, setIsDark } = useDarkMode();
   const [state, dispatch] = useReducer(calculatorReducer, initialiState);
-  
-  // Add keyboard support
   useKeyboardInput(dispatch);
 
   const displayValue = state.currentValue || state.previousValue || '0';

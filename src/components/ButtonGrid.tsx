@@ -1,4 +1,3 @@
-import { Divide, Dot, Equal, Minus, Plus, X } from 'lucide-react';
 import { Action } from '../types';
 import { Button } from './Button';
 
@@ -20,7 +19,7 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
         onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operation: '/' })}
         className="bg-violet-500/80 hover:bg-violet-600/90 text-white backdrop-blur-sm flex items-center justify-center"
       >
-        <Divide />
+        /
       </Button>
 
       <Button
@@ -28,7 +27,7 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
         onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operation: '*' })}
         className="bg-violet-500/80 hover:bg-violet-600/90 text-white backdrop-blur-sm flex items-center justify-center"
       >
-        <X />
+        X
       </Button>
 
       <Button
@@ -60,7 +59,7 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
         onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operation: '-' })}
         className="bg-violet-500/80 hover:bg-violet-600/90 text-white backdrop-blur-sm flex items-center justify-center"
       >
-        <Minus />
+        -
       </Button>
 
       <Button
@@ -92,7 +91,7 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
         onClick={() => dispatch({ type: 'CHOOSE_OPERATION', operation: '+' })}
         className="bg-violet-500/80 hover:bg-violet-600/90 text-white backdrop-blur-sm flex items-center justify-center"
       >
-        <Plus />
+        +
       </Button>
 
       <Button
@@ -122,7 +121,7 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
         onClick={() => dispatch({ type: 'EVALUATE' })}
         className="row-span-2 min-h-full bg-blue-500/80 hover:bg-blue-600/90 text-white backdrop-blur-sm flex items-center justify-center"
       >
-        <Equal />
+        =
       </Button>
       <Button
         id="zero"
@@ -136,7 +135,7 @@ export const ButtonGrid: React.FC<ButtonGridProps> = ({ dispatch }) => {
         onClick={() => dispatch({ type: 'ADD_DIGIT', digit: '.' })}
         className="bg-gray-700/80 hover:bg-gray-600/90 text-white backdrop-blur-sm flex items-center justify-center"
       >
-        <Dot />
+        .
       </Button>
     </div>
   );
