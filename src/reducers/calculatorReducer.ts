@@ -21,6 +21,12 @@ export function calculatorReducer(state: CalculatorState, action: Action): Calcu
       return initialiState;
     case 'EVALUATE':
       return handleEvaluation(state);
+    case 'DELETE_DIGIT':
+      if (state.currentValue === '') return state;
+      return {
+        ...state,
+        currentValue: state.currentValue.slice(0, -1)
+      };
     default:
       return state;
   }

@@ -22,4 +22,5 @@ export type Action =
   | { type: 'ADD_DIGIT'; digit: string }
   | { type: 'CHOOSE_OPERATION'; operation: Operation }
   | { type: 'CLEAR' }
+  | { type: 'DELETE_DIGIT' }
   | { type: 'EVALUATE' };
