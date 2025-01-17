@@ -1,9 +1,9 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=128px height=128px src="./public/calculator.png" alt="md preview X"></a>
+ <img width=128px height=128px src="./public/calculator.png" alt="Typescript Calculator"></a>
 </p>
 
-<h3 align="center">md preview X</h3>
+<h3 align="center">Typescript Calculator</h3>
 
 <div align="center"  style="display:flex; align-items:center; gap:1rem; flex-wrap:wrap; justify-content:center" >
 <div>
@@ -60,7 +60,7 @@ A simple calculator built with React, TypeScript, and Tailwind CSS. Perform simp
 
 <p align="center" >
   <a href="https://ts-fcc-calc.netlify.app/" rel="noopener">
-<img src="./public/Screenshot.png" alt="md preview X" style="margin:10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"></a>
+<img src="./public/Screenshot.png" alt="Typescript Calculator" style="margin:10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);"></a>
 </p>
 
 ## ✨ Features <a name = "features"></a>
